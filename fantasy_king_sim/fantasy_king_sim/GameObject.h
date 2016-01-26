@@ -9,6 +9,7 @@ public:
 	CGameObject();
 	~CGameObject();
 	void Render();
+        POINT getPosition();
 private:
 	std::shared_ptr<IGraphicSystem> _graph;
 	unsigned int _x, _y;

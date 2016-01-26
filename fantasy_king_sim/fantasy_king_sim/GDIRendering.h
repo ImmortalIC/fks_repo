@@ -3,6 +3,9 @@
 #include "stdafx.h"
 #include <functional>
 #include "GraphicSystem.h"
+
+#define SPRITE_SIZE 40
+
 typedef std::function<BOOL(HDC, int, int, int, int)> rendering_func;
 class CGDIRendering : public IGraphicSystem
 {
