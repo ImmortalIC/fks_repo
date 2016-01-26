@@ -30,10 +30,13 @@
     <ClInclude Include="GameObject.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GraphicSystem.h">
+    <ClInclude Include="GDIRendering.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GDIRendering.h">
+    <ClInclude Include="GDIGraphicSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemLocator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ObjectFactory.h">
@@ -51,6 +54,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GDIGraphicSystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GDIRendering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjectFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -120,14 +120,21 @@
   <ItemGroup>
     <ClInclude Include="App.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GDIGraphicSystem.h" />
+    <ClInclude Include="GDIRendering.h" />
+    <ClInclude Include="ObjectFactory.h" />
     <ClInclude Include="Renderable.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SystemLocator.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GDIGraphicSystem.cpp" />
+    <ClCompile Include="GDIRendering.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="ObjectFactory.cpp" />
     <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>

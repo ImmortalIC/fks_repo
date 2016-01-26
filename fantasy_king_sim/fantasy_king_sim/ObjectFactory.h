@@ -1,11 +1,11 @@
 #pragma once
 #include "GameObject.h"
 
-class ObjectFactory
+class CObjectFactory
 {
 public:
-	ObjectFactory();
-	~ObjectFactory();
-	CGameObject* CreateVillage(unsigned x,unsigned y);
-	CGameObject* CreateTown(unsigned x, unsigned y);
+	CObjectFactory();
+	~CObjectFactory();
+	CGameObject_smart CreateVillage(unsigned x,unsigned y);
+	CGameObject_smart CreateTown(unsigned x, unsigned y);
 };
