@@ -14,5 +14,6 @@ bool CGDIRendering::Render(CGameObject* object)
     b=position.y-SPRITE_SIZE/2;
     c=position.x+SPRITE_SIZE/2;
     d=position.y+SPRITE_SIZE/2;
+    
 	return _func(CSystemLocator::GetGraphics()->getDc(), a, b, c, d);
 }
