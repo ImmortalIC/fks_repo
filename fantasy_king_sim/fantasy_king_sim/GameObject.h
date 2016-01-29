@@ -11,7 +11,7 @@ class CGameObject :
 public:
 	CGameObject();
 	~CGameObject();
-	void Render();
+	bool Render();
         POINT getPosition();
 private:
 	std::unique_ptr<IGraphicSystem> _graph;

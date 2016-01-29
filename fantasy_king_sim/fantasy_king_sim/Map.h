@@ -1,5 +1,7 @@
 #pragma once
 #include "stdafx.h"
+
+
 template <typename data>
 class CMap 
 {

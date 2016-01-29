@@ -1,10 +1,10 @@
 #pragma once
 #include "stdafx.h"
 #include "Map.h"
-
+#include "Renderable.h"
 #define TILE_SIZE 10
 
-class CLand 
+class CLand :public IRenderable
 {
 public:
     std::unique_ptr<CMap> road_map;

@@ -13,9 +13,9 @@ CGameObject::~CGameObject()
     
 }
 
-void CGameObject::Render()
+bool CGameObject::Render()
 {
-    _graph->Render(this);
+    return _graph->Render(this);
 }
 
 
