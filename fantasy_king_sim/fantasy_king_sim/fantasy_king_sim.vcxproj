@@ -119,23 +119,31 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="App.h" />
+    <ClInclude Include="GameBoard.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GDIGraphicSystem.h" />
     <ClInclude Include="GDIRendering.h" />
+    <ClInclude Include="GraphicSystem.h" />
+    <ClInclude Include="Land.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="ObjectFactory.h" />
     <ClInclude Include="Renderable.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="SystemLocator.h" />
+    <ClInclude Include="WorldBoard.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GDIGraphicSystem.cpp" />
     <ClCompile Include="GDIRendering.cpp" />
+    <ClCompile Include="Land.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="ObjectFactory.cpp" />
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="SystemLocator.cpp" />
+    <ClCompile Include="WorldBoard.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="fantasy_king_sim.rc" />

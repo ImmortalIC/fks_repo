@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "GameBoard.h"
 #include "GameObject.h"
-#include "Map.h"
+#include "Land.h"
 
 class CWorldBoard : public IGameBoard 
 {

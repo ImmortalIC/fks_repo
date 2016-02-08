@@ -1,13 +1,13 @@
 #pragma once
 #include "SystemLocator.h"
+CGDIGraphicSystem* CSystemLocator::graph;
 
-
-static void CSystemLocator::Locate(CGDIGraphicSystem* object)
+void CSystemLocator::Locate(CGDIGraphicSystem* object)
 {
     CSystemLocator::graph=object;
 }
 
-static CGDIGraphicSystem* CSystemLocator::GetGraphics()
+CGDIGraphicSystem* CSystemLocator::GetGraphics()
 {
     return CSystemLocator::graph;
 }

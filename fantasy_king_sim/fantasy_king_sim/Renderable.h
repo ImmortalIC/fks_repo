@@ -4,6 +4,6 @@ class IRenderable
 {
 public:
 	IRenderable() {};
-	virtual ~IRenderable() = 0;
+	virtual ~IRenderable() {};
 	virtual bool Render() = 0;
 };

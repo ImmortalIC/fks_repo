@@ -4,7 +4,7 @@ class IGameBoard
 {
 public:
     IGameBoard(){};
-    virtual ~IGameBoard()=0;
+	virtual ~IGameBoard() {};
     virtual void Iterate()=0;
    
 };

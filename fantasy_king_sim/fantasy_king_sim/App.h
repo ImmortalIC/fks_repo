@@ -1,6 +1,8 @@
 #pragma once
 #pragma once
 #include "stdafx.h"
+#include "GameBoard.h"
+#include "GDIGraphicSystem.h"
 #define WIDTH 1920
 #define HEIGHT 1080
 
@@ -20,7 +22,8 @@ private:
 	TCHAR szWindowClass[100];			// имя класса главного окна
 	ATOM MyRegisterClass(HINSTANCE hInstance);
 	LRESULT ProcessMessages(HWND, UINT, WPARAM, LPARAM);
-
+	std::unique_ptr<IGameBoard> board;
+	std::unique_ptr<CGDIGraphicSystem> renderer;
 };
 
 

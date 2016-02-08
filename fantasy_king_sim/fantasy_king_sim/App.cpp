@@ -1,6 +1,7 @@
 #include "App.h"
 #include "resource.h"
-#include <type_traits>
+#include "WorldBoard.h"
+#include "SystemLocator.h"
 CApp* self;
 
 CApp::CApp()
@@ -51,8 +52,9 @@ BOOL CApp::InitInstance(HINSTANCE hInstance, int nCmdShow)
 		return FALSE;
 	}
 
-
-
+	board = std::unique_ptr<IGameBoard>(new CWorldBoard());
+	renderer = std::unique_ptr<CGDIGraphicSystem>(new CGDIGraphicSystem(hWnd));
+	CSystemLocator::Locate(renderer.get());
 
 	ShowWindow(hWnd, this->nCmdShow);
 	UpdateWindow(hWnd);
@@ -84,7 +86,9 @@ LRESULT CApp::ProcessMessages(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPa
 
 		break;
 	case WM_PAINT:
-
+		renderer->RenderStart();
+		board->Iterate();
+		renderer->RenderEnd();
 		break;
 	case WM_DESTROY:
 		PostQuitMessage(0);

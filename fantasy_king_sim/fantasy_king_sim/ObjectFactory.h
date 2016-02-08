@@ -6,6 +6,6 @@ class CObjectFactory
 public:
 	CObjectFactory();
 	~CObjectFactory();
-	CGameObject_smart CreateVillage(unsigned x,unsigned y);
-	CGameObject_smart CreateTown(unsigned x, unsigned y);
+	CGameObject_smart CreateVillage(unsigned int x,unsigned int y);
+	CGameObject_smart CreateTown(unsigned int x, unsigned int y);
 };

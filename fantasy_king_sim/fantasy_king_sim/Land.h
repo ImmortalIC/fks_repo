@@ -7,11 +7,12 @@
 class CLand :public IRenderable
 {
 public:
-    std::unique_ptr<CMap> road_map;
+    std::unique_ptr<CMap<bool>> road_map;
     CLand(unsigned int x,unsigned int y);
     ~CLand();
     POINT getSize();
     bool Render();
 private:
     unsigned int _x,_y;
+	void DrawRoads(int i,int j);
 };
