@@ -1,7 +1,7 @@
 #pragma once
 
 #include "stdafx.h"
-#include <functional>
+
 #include "GraphicSystem.h"
 
 #define SPRITE_SIZE 40

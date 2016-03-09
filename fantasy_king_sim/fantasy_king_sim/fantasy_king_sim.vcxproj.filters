@@ -57,6 +57,15 @@
     <ClInclude Include="GraphicSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MechanicsSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FormulaParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="utility.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp">
@@ -87,6 +96,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="WorldBoard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FormulaParser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

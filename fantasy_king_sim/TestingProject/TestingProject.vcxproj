@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7E7062B3-EFE9-45E1-B13E-121888D9A40A}</ProjectGuid>
-    <RootNamespace>fantasy_king_sim</RootNamespace>
+    <ProjectGuid>{F662FBB5-9D06-4312-8266-9FB6E2AFF47E}</ProjectGuid>
+    <RootNamespace>TestingProject</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -68,15 +68,20 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\Documents\Ебашь Иммо Ебашь\fantasy king sim\fantasy_king_sim\fantasy_king_sim;D:\gtest-1.7.0\gtest-1.7.0\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\gtest-1.7.0\gtest-1.7.0\msvc\gtest\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>gtest.lib;gtest_main.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -118,42 +123,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="App.h" />
-    <ClInclude Include="FormulaParser.h" />
-    <ClInclude Include="GameBoard.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="GDIGraphicSystem.h" />
-    <ClInclude Include="GDIRendering.h" />
-    <ClInclude Include="GraphicSystem.h" />
-    <ClInclude Include="Land.h" />
-    <ClInclude Include="Map.h" />
-    <ClInclude Include="MechanicsSystem.h" />
-    <ClInclude Include="ObjectFactory.h" />
-    <ClInclude Include="Renderable.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="SystemLocator.h" />
-    <ClInclude Include="utility.h" />
-    <ClInclude Include="WorldBoard.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="App.cpp" />
-    <ClCompile Include="FormulaParser.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="GDIGraphicSystem.cpp" />
-    <ClCompile Include="GDIRendering.cpp" />
-    <ClCompile Include="Land.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="ObjectFactory.cpp" />
-    <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="SystemLocator.cpp" />
-    <ClCompile Include="WorldBoard.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="fantasy_king_sim.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="icon1.ico" />
+    <ClCompile Include="..\fantasy_king_sim\FormulaParser.cpp" />
+    <ClCompile Include="FormulaParser_test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
