@@ -10,12 +10,17 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
 	CApp app;
-
-	if (!app.InitInstance(hInstance, nCmdShow))
+	try {
+		if (!app.InitInstance(hInstance, nCmdShow))
+		{
+			return 0;
+		}
+	}
+	catch (std::string e)
 	{
+	
 		return 0;
 	}
-
 	int exit_code = app.StartCycle();
 	return exit_code;
 }

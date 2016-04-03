@@ -33,7 +33,7 @@ private:
 	double makeAction(std::stack<double>* stack, binary_function<double,double,double>* func);
 	
 };
-
+typedef std::shared_ptr<CFormulaParser> Formula_ptr;
 class CConditionalFormulaParser : public CFormulaParser
 {
 public:

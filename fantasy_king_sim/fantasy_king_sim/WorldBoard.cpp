@@ -1,5 +1,5 @@
 #pragma once
-
+#include <algorithm>
 #include "WorldBoard.h"
 #include "ObjectFactory.h"
 
@@ -14,6 +14,7 @@ void CWorldBoard::Iterate()
     landscape->Render();
 	 for(std::vector<CGameObject_smart>::iterator it=objects.begin();it!=objects.end();it++)
     {
+		(*it)->CalcFrame(this);
         (*it)->Render();
     }
 }
@@ -64,4 +65,20 @@ void CWorldBoard::InitTestEnviroment()
 	landscape->road_map->setValue(42, 15, 1);
 	landscape->road_map->setValue(43, 15, 1);
 
+}
+
+void CWorldBoard::NextTurn()
+{
+	for (std::vector<CGameObject_smart>::iterator it = objects.begin(); it != objects.end(); it++)
+	{
+		(*it)->CalcTurn(this);
+	}
+}
+
+const CGameObject* CWorldBoard::checkPoint(const POINT& point) 
+{
+	std::vector<CGameObject_smart>::iterator found = find(objects.begin(), objects.end(), point);
+	if (found == objects.end())
+		return NULL;
+	return found->get();
 }

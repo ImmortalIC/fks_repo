@@ -77,6 +77,16 @@ TEST(FormulaParserTest, TestNumericConstants2)
 	EXPECT_EQ(-14, parser2->Calculate(arguments));
 	
 }
+
+
+TEST(FormulaParserTest, DecimalTest)
+{
+	std::unique_ptr<CFormulaParser> parser1(CFormulaParser::ParserFactory("A*0.5")), parser2(CFormulaParser::ParserFactory("A+1.254"));
+	std::map<char, double> arguments;
+	arguments['A'] = 5;
+	EXPECT_EQ(2.5, parser1->Calculate(arguments));
+	EXPECT_EQ(6.254, parser2->Calculate(arguments));
+}
 int main(int argc, char **argv) {
 	::testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();

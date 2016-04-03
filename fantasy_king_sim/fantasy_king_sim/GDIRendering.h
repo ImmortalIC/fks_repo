@@ -13,6 +13,11 @@ public:
 	CGDIRendering(rendering_func func);
 	~CGDIRendering();
 	bool Render(CGameObject* object);
+	inline UINT getSpriteSize() const
+	{
+		return SPRITE_SIZE;
+	}
+
 private:
 	rendering_func _func;
 
