@@ -13,6 +13,7 @@ private:
 	HWND _hWnd;
 	PAINTSTRUCT _ps;
 	bool _renderStarted = false;
-    
+	HBITMAP bitmap;
+	HDC bitmap_hdc;
     
 };
