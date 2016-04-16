@@ -23,7 +23,7 @@ void CWorldBoard::InitTestEnviroment()
 {
     landscape=std::unique_ptr<CLand>(new CLand(50,50));
     CObjectFactory factory;
-    
+	CIngameResource::InitalizeResources();
     objects.push_back(factory.CreateTown(100,100));
     objects.push_back(factory.CreateTown(450,140));
     objects.push_back(factory.CreateVillage(170,450));

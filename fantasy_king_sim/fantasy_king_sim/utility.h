@@ -75,4 +75,30 @@ public:
 	}
 };
 
+template<class T>
+class less_equal : public binary_function<T, T, bool>
+{
+public:
+	bool operator()(const T &a, const T &b)
+	{
+		return a <= b;
+	}
+	bool operator()(const T &a)
+	{
+		throw "Error while calculation: not enough arguments";
+	}
+};
 
+template<class T>
+class greater_equal : public binary_function<T, T, bool>
+{
+public:
+	bool operator()(const T &a, const T &b)
+	{
+		return a >= b;
+	}
+	bool operator()(const T &a)
+	{
+		throw "Error while calculation: not enough arguments";
+	}
+};

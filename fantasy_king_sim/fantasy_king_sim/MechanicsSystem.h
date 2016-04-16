@@ -4,7 +4,7 @@
 /*ID of types of mechanics*/
 #define IDT_SETTLEMENT 0
 class CGameObject;
-enum mechanics_types {EMPTY_MECH, MECH_SETTLEMENT };
+enum mechanics_types {EMPTY_MECH, MECH_TOWN,MECH_VILLAGE };
 class IMechanicsSystem
 {
 public:

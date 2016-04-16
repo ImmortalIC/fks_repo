@@ -125,11 +125,13 @@
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GDIGraphicSystem.h" />
     <ClInclude Include="GDIRendering.h" />
+    <ClInclude Include="GMStorage.h" />
     <ClInclude Include="GraphicSystem.h" />
     <ClInclude Include="GUIButton.h" />
     <ClInclude Include="GUIElement.h" />
     <ClInclude Include="GUIStatusPanel.h" />
     <ClInclude Include="GUISystem.h" />
+    <ClInclude Include="IngameResource.h" />
     <ClInclude Include="Land.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="MapWindow.h" />
@@ -150,9 +152,11 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GDIGraphicSystem.cpp" />
     <ClCompile Include="GDIRendering.cpp" />
+    <ClCompile Include="GMStorage.cpp" />
     <ClCompile Include="GUIButton.cpp" />
     <ClCompile Include="GUIStatusPanel.cpp" />
     <ClCompile Include="GUISystem.cpp" />
+    <ClCompile Include="IngameResource.cpp" />
     <ClCompile Include="Land.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MapWindow.cpp" />
